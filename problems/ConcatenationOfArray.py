@@ -9,7 +9,5 @@ class Solution:
             ans[i] = j
         return ans
 
-
-
 solution = Solution()
 solution.getConcatenation([1,2,3,4])
