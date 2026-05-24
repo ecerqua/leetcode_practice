@@ -7,6 +7,7 @@ class Solution:
             x = i % n
             j = nums[x]
             ans[i] = j
+        return ans
 
 
 
