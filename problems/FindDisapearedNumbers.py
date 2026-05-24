@@ -1,5 +1,5 @@
 class Solution():
-    def findDissapearedNumbers(self, nums):
+    def findDisappearedNumbers(self, nums):
         n = len(nums)
         counts = {}
         answer = []
