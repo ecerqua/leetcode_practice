@@ -1,2 +1,12 @@
-for i in range(1, 6 + 1):
-    print(i)
+target = [1, 2]
+n = 4
+
+maximum = max(target)
+
+difference = maximum - len(target)
+
+length = len(target)
+
+num = (difference * 2) + (length)
+
+print(num)
