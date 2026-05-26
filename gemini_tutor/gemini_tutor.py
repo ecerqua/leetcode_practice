@@ -1,8 +1,11 @@
 from google import genai
 import asyncio
+import dotenv
+
+API_KEY = dotenv.get_key(r"/home/ethan/Python/repos/LeetCode/.env", "API_KEY")
 
 async def ai_tutor(prompt):
-    api_key = "AIzaSyC6EpTY47Zors4FfeyJ8XrLW5Ti2MgFwgk"
+    api_key = API_KEY
 
     model = "gemini-3.5-flash"
     config = {"response_modalities": ["TEXT"]}
