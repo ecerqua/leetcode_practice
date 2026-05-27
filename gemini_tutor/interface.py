@@ -25,7 +25,8 @@ prompt_box.pack(pady=5, padx=5, fill=ctk.BOTH, expand=False)
 def get_response():
     prompt = prompt_box.get("1.0", ctk.END)
     chat_box.insert(ctk.END, f"\n--- Prompt ---\n{prompt}")
-    response = asyncio.run(ai_tutor(prompt_box.get("1.0", ctk.END)))
+    chat_box.yview_moveto(1)
+    response = ai_tutor(prompt_box.get("1.0", ctk.END))
     prompt_box.delete("1.0", ctk.END)
     chat_box.insert(ctk.END, f"\n--- Response  ---\n {response}")
 
