@@ -24,10 +24,10 @@ prompt_box.pack(pady=5, padx=5, fill=ctk.BOTH, expand=False)
 
 def get_response():
     prompt = prompt_box.get("1.0", ctk.END)
-    chat_box.insert(ctk.END, "\n" + prompt)
-    prompt_box.delete("1.0", ctk.END)
+    chat_box.insert(ctk.END, f"\n--- Prompt ---\n{prompt}")
     response = asyncio.run(ai_tutor(prompt_box.get("1.0", ctk.END)))
-    chat_box.insert(ctk.END, "\n" + response)
+    prompt_box.delete("1.0", ctk.END)
+    chat_box.insert(ctk.END, f"\n--- Response  ---\n {response}")
 
 submit_button = ctk.CTkButton(root, text="Submit", command=get_response, font=("Times New Roman", 18))
 submit_button.pack(pady=5)
